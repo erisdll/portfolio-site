@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "./theme-toggle"
 
 export function Navigation() {
   const pathname = usePathname()
@@ -15,6 +16,7 @@ export function Navigation() {
   const routes = [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
+    { href: "/experience", label: "Experience" },
   ]
 
   const isActive = (path: string) => {
@@ -27,7 +29,7 @@ export function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold">
-          <span className="text-crimson">Erika Mello</span>
+          <span className="text-red">Erika Mello</span>
         </Link>
         <nav className="hidden md:flex gap-6">
           {routes.map((route) => (
@@ -35,8 +37,8 @@ export function Navigation() {
               key={route.href}
               href={route.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-crimson",
-                isActive(route.href) ? "text-crimson" : "text-muted-foreground",
+                "text-sm font-medium transition-colors hover:text-red",
+                isActive(route.href) ? "text-red" : "text-muted-foreground",
               )}
             >
               {route.label}
@@ -44,24 +46,25 @@ export function Navigation() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-crimson">
+          <Link href="https://github.com/erisdll" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-red">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Button>
           </Link>
-          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-crimson">
+          <Link href="https://linkedin.com/in/erika-mello" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-red">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Button>
           </Link>
-          <Link href="mailto:erika@example.com">
-            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-crimson">
+          <Link href="#contact">
+            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-red">
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
             </Button>
           </Link>
+          <ThemeToggle />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
@@ -76,8 +79,8 @@ export function Navigation() {
                     key={route.href}
                     href={route.href}
                     className={cn(
-                      "text-lg font-medium transition-colors hover:text-crimson",
-                      isActive(route.href) ? "text-crimson" : "text-muted-foreground",
+                      "text-lg font-medium transition-colors hover:text-red",
+                      isActive(route.href) ? "text-red" : "text-muted-foreground",
                     )}
                     onClick={() => setOpen(false)}
                   >
@@ -85,24 +88,25 @@ export function Navigation() {
                   </Link>
                 ))}
                 <div className="flex gap-4 mt-4">
-                  <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-crimson">
+                  <Link href="https://github.com/erisdll" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-red">
                       <Github className="h-5 w-5" />
                       <span className="sr-only">GitHub</span>
                     </Button>
                   </Link>
-                  <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-crimson">
+                  <Link href="https://linkedin.com/in/erika-mello" target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-red">
                       <Linkedin className="h-5 w-5" />
                       <span className="sr-only">LinkedIn</span>
                     </Button>
                   </Link>
-                  <Link href="mailto:erika@example.com">
-                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-crimson">
+                  <Link href="#contact" onClick={() => setOpen(false)}>
+                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-red">
                       <Mail className="h-5 w-5" />
                       <span className="sr-only">Email</span>
                     </Button>
                   </Link>
+                  <ThemeToggle />
                 </div>
               </div>
             </SheetContent>

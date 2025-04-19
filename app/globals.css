@@ -10,7 +10,7 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 72.2% 50.6%;
+    --primary: 0 100% 50%;
     --primary-foreground: 0 85.7% 97.3%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
@@ -22,7 +22,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 0 72.2% 50.6%;
+    --ring: 0 100% 50%;
     --radius: 0.5rem;
   }
 
@@ -33,7 +33,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 72.2% 50.6%;
+    --primary: 0 100% 50%;
     --primary-foreground: 0 85.7% 97.3%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
@@ -45,7 +45,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 0 72.2% 50.6%;
+    --ring: 0 100% 50%;
   }
 }
 
@@ -58,30 +58,30 @@
   }
 }
 
-.text-crimson {
-  color: #dc143c;
+.text-red {
+  color: #ff0000;
 }
 
-.bg-crimson {
-  background-color: #dc143c;
+.bg-red {
+  background-color: #ff0000;
 }
 
-.border-crimson {
-  border-color: #dc143c;
+.border-red {
+  border-color: #ff0000;
 }
 
-.hover\:bg-crimson\/90:hover {
-  background-color: rgba(220, 20, 60, 0.9);
+.hover\:bg-red\/90:hover {
+  background-color: rgba(255, 0, 0, 0.9);
 }
 
-.hover\:bg-crimson\/10:hover {
-  background-color: rgba(220, 20, 60, 0.1);
+.hover\:bg-red\/10:hover {
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
-.hover\:text-crimson:hover {
-  color: #dc143c;
+.hover\:text-red:hover {
+  color: #ff0000;
 }
 
-.focus-visible\:ring-crimson:focus-visible {
-  --tw-ring-color: #dc143c;
+.focus-visible\:ring-red:focus-visible {
+  --tw-ring-color: #ff0000;
 }
