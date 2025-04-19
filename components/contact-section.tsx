@@ -23,7 +23,7 @@ export function ContactSection() {
                 <div className="grid gap-4">
                   <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-darkred" />
-                    <span>your.email@example.com</span>
+                    <span>erika.melloramos@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Linkedin className="h-5 w-5 text-darkred" />
@@ -50,7 +50,7 @@ export function ContactSection() {
                 </div>
                 <div className="pt-4">
                   <h4 className="text-lg font-semibold">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Santa Maria, Brazil</p>
                 </div>
               </div>
             </CardContent>
