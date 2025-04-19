@@ -8,9 +8,9 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold">
           <User className="h-5 w-5 text-darkred" />
-          <span>Erika Mello</span>
+          <span>ErikaMello.dev</span>
         </Link>
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-5">
           <Link href="/" className="text-sm font-medium hover:text-darkred transition-colors">
             Home
           </Link>
@@ -22,9 +22,6 @@ export default function Header() {
           </Link>
           <Link href="/projects" className="text-sm font-medium hover:text-darkred transition-colors">
             Projects
-          </Link>
-          <Link href="/#contact" className="text-sm font-medium hover:text-darkred transition-colors">
-            Contact
           </Link>
         </nav>
         <div className="flex items-center gap-2">
