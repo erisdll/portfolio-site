@@ -1,27 +1,29 @@
 export function SkillsSection() {
   const skillCategories = [
     {
-      name: "Languages & Frameworks",
+      name: "Backend",
+      skills: ["Java (11, 17, 21)", "Spring", "NestJS", "Python", "AWS S3", "AWS DynamoDB", "AWS SQS", "AWS RDS"],
+    },
+    {
+      name: "Frontend",
+      skills: ["JavaScript", "TypeScript", "React", "Next.js", "HTML/CSS", "Tailwind CSS", "Vite"],
+    },
+    {
+      name: "DevOps & Tools",
       skills: [
-        "Java (11, 17, 21)",
-        "Spring",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "NestJS",
-        "Python",
-        "HTML/CSS",
-        "Tailwind CSS",
+        "Docker",
+        "CI/CD",
+        "Bash",
+        "Linux",
+        "IntelliJ",
+        "DataGrip",
+        "VS Code",
+        "Git",
+        "Bitbucket",
+        "Maven",
+        "Postman",
+        "Lucidchart",
       ],
-    },
-    {
-      name: "Cloud & DevOps",
-      skills: ["AWS S3", "AWS DynamoDB", "AWS SQS", "AWS RDS", "Docker", "CI/CD", "Bash", "Linux"],
-    },
-    {
-      name: "Tools & Platforms",
-      skills: ["IntelliJ", "DataGrip", "VS Code", "Git", "Bitbucket", "Maven", "Postman", "Lucidchart", "Vite"],
     },
     {
       name: "Soft Skills",

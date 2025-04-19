@@ -13,7 +13,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold">
           <User className="h-5 w-5 text-darkred" />
-          <span>Erika Mello</span>
+          <span>ErikaMello.dev</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -29,9 +29,6 @@ export default function Header() {
           </Link>
           <Link href="/projects" className="text-sm font-medium hover:text-darkred transition-colors">
             Projects
-          </Link>
-          <Link href="/#contact" className="text-sm font-medium hover:text-darkred transition-colors">
-            Contact
           </Link>
         </nav>
 
@@ -91,13 +88,6 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Projects
-            </Link>
-            <Link
-              href="/#contact"
-              className="text-sm font-medium hover:text-darkred transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
             </Link>
             <div className="flex items-center gap-2 pt-2">
               <Link href="https://github.com/erisdll" target="_blank" rel="noopener noreferrer">

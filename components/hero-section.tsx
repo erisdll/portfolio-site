@@ -32,13 +32,9 @@ export function HeroSection() {
             </div>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <Image
-              src="/placeholder.svg?height=600&width=600"
-              alt="Profile"
-              width={600}
-              height={600}
-              className="aspect-square overflow-hidden rounded-full object-cover border border-darkred/30"
-            />
+            <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden border-4 border-darkred/30">
+              <Image src="/erikaMello.jpeg" alt="Erika Mello" fill className="object-cover" priority />
+            </div>
           </div>
         </div>
       </div>
