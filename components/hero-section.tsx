@@ -33,7 +33,7 @@ export function HeroSection() {
           </div>
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="/erikamello.jpg?height=600&width=600"
+              src="/placeholder.svg?height=600&width=600"
               alt="Profile"
               width={600}
               height={600}
