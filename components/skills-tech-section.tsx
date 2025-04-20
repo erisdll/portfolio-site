@@ -1,4 +1,4 @@
-export function SkillsTechSection() {
+export function TechStackSection() {
   const skillCategories = [
     {
       name: "Backend",
@@ -41,7 +41,9 @@ export function SkillsTechSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Skills & Technologies</h2>
+          <h2 className="text-4xl font-bold sm:text-5xl">
+          <span className="text-darkred">{">"}</span>skills
+        </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               These are the technologies and tools I work with to bring ideas to life.
             </p>

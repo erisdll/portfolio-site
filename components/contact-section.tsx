@@ -1,9 +1,34 @@
+"use client"
+
+import React, { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { toast } from "@/components/ui/use-toast"
 import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
-import { ContactForm } from "@/components/contact-form"
 
 export function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    setTimeout(() => {
+      setIsSubmitting(false)
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      })
+
+      const form = e.target as HTMLFormElement
+      form.reset()
+    }, 1500)
+  }
+
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
       <div className="container px-4 md:px-6">
@@ -15,6 +40,7 @@ export function ContactSection() {
             </p>
           </div>
         </div>
+
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 lg:grid-cols-2">
           <Card className="bg-background/60 border-darkred/30">
             <CardContent className="p-6">
@@ -55,7 +81,53 @@ export function ContactSection() {
               </div>
             </CardContent>
           </Card>
-          <ContactForm />
+
+          <Card className="bg-background/60 border-darkred/30">
+            <CardContent className="p-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input
+                    id="name"
+                    placeholder="Your name"
+                    required
+                    className="border-darkred/30 focus-visible:ring-darkred"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="your.email@example.com"
+                    required
+                    className="border-darkred/30 focus-visible:ring-darkred"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="subject">Subject</Label>
+                  <Input
+                    id="subject"
+                    placeholder="What is this regarding?"
+                    required
+                    className="border-darkred/30 focus-visible:ring-darkred"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Your message..."
+                    className="min-h-[120px] border-darkred/30 focus-visible:ring-darkred"
+                    required
+                  />
+                </div>
+                <Button type="submit" className="w-full bg-darkred hover:bg-darkred/80" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

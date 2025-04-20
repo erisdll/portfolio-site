@@ -11,9 +11,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold">
-          <User className="h-5 w-5 text-darkred" />
-          <span>ErikaMello.dev</span>
+        <Link href="/" className="flex items-center text-lg font-bold">
+          <User className="h-5 w-5 text-darkred mr-2" />
+          <span>ErikaMello</span><span className="text-darkred">.dev</span>
         </Link>
 
         {/* Desktop Navigation */}
