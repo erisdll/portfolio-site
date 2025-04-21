@@ -13,19 +13,8 @@ export default function ProjectsSection() {
         </p>
       </div>
 
-      {/* Fade edges */}
-      <div className="relative">
-        <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent z-10"
-          aria-hidden="true"
-        />
-
-        {/* Scrollable container */}
-        <div className="flex gap-6 overflow-x-auto px-4 py-4 justify-center snap-x snap-mandatory scroll-smooth">
+      <div className="relative flex justify-center items-center">
+        <div className="relative z-10 flex gap-6 px-4 py-4 mx-auto overflow-x-auto justify-start max-w-8xl scroll-smooth scrollbar-hide" >
           {projects.map((project) => (
             <div
               key={project.id}
@@ -37,7 +26,7 @@ export default function ProjectsSection() {
                 tags={project.technologies}
                 imageUrl={project.imageUrl}
                 githubUrl={project.githubUrl}
-                liveUrl={project.liveUrl}
+                detailsUrl={`/projects/${project.id}`}
               />
             </div>
           ))}

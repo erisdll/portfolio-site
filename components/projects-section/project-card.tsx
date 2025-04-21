@@ -11,10 +11,11 @@ interface ProjectCardProps {
   tags: string[]
   imageUrl: string
   githubUrl: string
-  liveUrl: string
+  detailsUrl: string
+
 }
 
-export function ProjectCard({ title, description, tags, imageUrl, githubUrl, liveUrl }: ProjectCardProps) {
+export function ProjectCard({ title, description, tags, imageUrl, githubUrl, detailsUrl }: ProjectCardProps) {
   return (
 <Card className="flex flex-col overflow-hidden h-[500px]">
   <div className="aspect-video relative overflow-hidden">
@@ -36,7 +37,6 @@ export function ProjectCard({ title, description, tags, imageUrl, githubUrl, liv
         </Badge>
       ))}
     </div>
-    {/* Spacer para empurrar o footer */}
     <div className="flex-grow" />
   </CardContent>
 
@@ -47,7 +47,7 @@ export function ProjectCard({ title, description, tags, imageUrl, githubUrl, liv
             Code
           </Button>
         </Link>
-        <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
+        <Link href={detailsUrl} target="_blank" rel="noopener noreferrer">
           <Button size="sm">
             <ExternalLink className="mr-2 h-4 w-4" />
             Details

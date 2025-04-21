@@ -10,6 +10,35 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Custom Dark Red Scrollbar */
+  .scrollbar-darkred::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .scrollbar-darkred::-webkit-scrollbar-track {
+    @apply bg-background rounded;
+  }
+
+  .scrollbar-darkred::-webkit-scrollbar-thumb {
+    @apply bg-darkred rounded hover:bg-[#A52A2A];
+  }
+
+  /* Firefox support */
+  .scrollbar-darkred {
+    scrollbar-width: thin;
+    scrollbar-color: #8B0000 hsl(var(--background));
+  }
+
+  /* Scrollbar Hide Utility */
+  .scrollbar-hide::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @layer base {

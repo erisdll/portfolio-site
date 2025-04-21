@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowDown, ArrowRight, Download } from "lucide-react"
+import { ArrowRight, Download } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -23,13 +23,20 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-              <Link href="#contact" passHref>
-                <Button variant="outline" className="w-full sm:w-auto border-darkred hover:bg-darkred hover:text-white">
+              <a
+                href="/ErikaMello_CV.pdf"
+                download="ErikaMello_CV.pdf"
+                className="w-full sm:w-auto"
+              >
+                <Button
+                  variant="outline"
+                  className="w-full sm:w-auto border-darkred hover:bg-darkred hover:text-white"
+                >
                   Download CV
                   <Download className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Button>
-              </Link>
-              
+              </a>
+
               <Link href="#projects" passHref>
                 <Button className="w-full sm:w-auto bg-darkred/80 hover:bg-darkred text-white">
                   View My Work
@@ -41,13 +48,16 @@ export function HeroSection() {
 
           {/* Imagem de perfil */}
           <div className="flex justify-center">
-            <figure className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden border-4 border-darkred/30 shadow-lg">
+            <figure
+              className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] 
+              rounded-full overflow-hidden border-4 border-darkred/30 shadow-lg"
+            >
               <Image
                 src="/erikaMello.jpeg"
                 alt="Portrait of Erika Mello"
                 fill
-                className="object-cover"
                 priority
+                className="object-cover"
               />
             </figure>
           </div>

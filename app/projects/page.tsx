@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             tags={project.technologies}
             imageUrl={project.imageUrl}
             githubUrl={project.githubUrl}
-            liveUrl={project.liveUrl}
+            detailsUrl={`/projects/${project.id}`}
           />
         ))}
       </div>
