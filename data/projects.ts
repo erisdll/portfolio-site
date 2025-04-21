@@ -31,25 +31,5 @@ export const projects = [
       githubUrl: "https://github.com/example/analytics-dashboard",
       liveUrl: "https://data.example.com",
     },
-    {
-      id: 4,
-      title: "Real‑Time Chat Application",
-      description:
-        "A WebSocket‑based chat app featuring channels, typing indicators and user presence, with horizontal and vertical scalability.",
-      imageUrl: "/placeholder.svg?height=400&width=600",
-      technologies: ["TypeScript", "Node.js", "Socket.io", "React", "Redis"],
-      githubUrl: "https://github.com/example/realtime-chat",
-      liveUrl: "https://chat.example.com",
-    },
-    {
-      id: 5,
-      title: "ML Model Deployment Pipeline",
-      description:
-        "A CI/CD pipeline for training and serving machine learning models using Docker, Kubernetes and monitoring with Prometheus.",
-      imageUrl: "/placeholder.svg?height=400&width=600",
-      technologies: ["Python", "TensorFlow", "FastAPI", "Docker", "Kubernetes", "Prometheus"],
-      githubUrl: "https://github.com/example/ml-deployment",
-      liveUrl: "https://ml.example.com",
-    },
   ]
   

@@ -12,8 +12,7 @@ export function AboutSection() {
             <span className="text-darkred">{">"}</span>whoami
           </h2>
           <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I'm a passionate software developer with a strong background in Java and web development. I love creating
-            robust, scalable applications that solve real-world problems.
+            I'm a passionate software developer with a strong background in Java and backend development.
           </p>
         </header>
 
@@ -21,19 +20,21 @@ export function AboutSection() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
           {/* Coluna 1 */}
           <div className="flex flex-col space-y-8">
-            <article className="space-y-3">
+            <article className="space-y-3 text-justify">
               <h3 className="text-xl font-semibold text-darkred">My Journey</h3>
               <p className="text-muted-foreground">
                 I started my journey in tech during college, where I discovered my passion for coding. Since then, I've
-                worked on various projects — from small apps to complex enterprise systems — always seeking to learn and grow.
+                worked on various projects — from small apps to complex systems — always seeking to learn and grow.
               </p>
             </article>
 
-            <article className="space-y-3">
+            <article className="space-y-3 text-justify">
               <h3 className="text-xl font-semibold text-darkred">My Approach</h3>
               <p className="text-muted-foreground">
-                I believe in writing clean, maintainable code and designing resilient, scalable systems. My focus is on
-                performance, reliability, and security — building software that endures.
+                I value systemic thinking, structured design, and technical precision. I strive to deliver the best solution for each problem — even if it means going beyond what’s initially expected.
+              </p>
+              <p className="text-muted-foreground">
+                My focus is on building robust, secure, well-documented and performant systems, while keeping a clean codebase that is readable, and easy for others to maintain.
               </p>
             </article>
           </div>
@@ -45,21 +46,27 @@ export function AboutSection() {
               <p className="text-muted-foreground leading-relaxed">
                 <strong>Bachelor's Degree in Computer Science</strong>
                 <br />
-                University Name, 2018–2022
+                Estácio de Sá, 2023-2027 {"(ongoing)"}
               </p>
+                <p className="text-muted-foreground leading-relaxed">
+                <strong>Backend Development Bootcamp</strong>
+                <br />
+                Reprograma, 2023-2027
+                </p>
             </article>
 
             <article className="space-y-3">
               <h3 className="text-xl font-semibold text-darkred">Experience</h3>
               <p className="text-muted-foreground leading-relaxed">
-                <strong>Senior Developer</strong> — Company Name<br />
-                2022 – Present
+                <strong>Software Development Intern</strong> — Akross <br />
+                2024 – Present
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                <strong>Junior Developer</strong> — Company Name<br />
-                2020 – 2022
+                <strong>Freelancer </strong> — Company Name<br />
+                2023 – 2024
               </p>
             </article>
+
           </div>
         </div>
       </div>
