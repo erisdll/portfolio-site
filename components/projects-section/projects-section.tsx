@@ -25,7 +25,7 @@ export default function ProjectsSection() {
         />
 
         {/* Scrollable container */}
-        <div className="flex gap-6 overflow-x-auto px-4 py-4 justify-start snap-x snap-mandatory scroll-smooth">
+        <div className="flex gap-6 overflow-x-auto px-4 py-4 justify-center snap-x snap-mandatory scroll-smooth">
           {projects.map((project) => (
             <div
               key={project.id}
