@@ -6,7 +6,6 @@ import { Github, Linkedin, Mail } from "lucide-react";
 const CONTACTS = {
   github: "https://github.com/erisdll",
   linkedin: "https://linkedin.com/in/erika-mello",
-  email: "mailto:erika.melloramos@gmail.com",
 };
 
 export default function Footer() {
@@ -15,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-border/40 py-6 md:py-0">
       <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground hover:text-white hover:scale-105 transition-transform duration-200">
           © {year} Erika Mello. All rights reserved.
         </p>
         <address className="not-italic">
@@ -26,7 +25,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="GitHub de Erika Mello"
             >
-              <Button variant="ghost" size="icon" className="hover:text-destructive">
+              <Button variant="ghost" size="icon" className="hover:text-white hover:scale-105 transition-transform duration-200">
                 <Github className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
               </Button>
@@ -38,22 +37,11 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="LinkedIn de Erika Mello"
             >
-              <Button variant="ghost" size="icon" className="hover:text-destructive">
+              <Button variant="ghost" size="icon" className="hover:text-white hover:scale-105 transition-transform duration-200">
                 <Linkedin className="h-4 w-4" />
                 <span className="sr-only">LinkedIn</span>
               </Button>
             </Link>
-
-            <Link
-              href={CONTACTS.email}
-              aria-label="Enviar email para Erika Mello"
-            >
-              <Button variant="ghost" size="icon" className="hover:text-destructive">
-                <Mail className="h-4 w-4" />
-                <span className="sr-only">Email</span>
-              </Button>
-            </Link>
-
           </div>
         </address>
       </div>

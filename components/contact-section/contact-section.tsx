@@ -50,7 +50,7 @@ export function ContactSection() {
 
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 lg:grid-cols-2">
           {/* Contact Information Card */}
-          <Card className="bg-background/60 border-darkred/30">
+          <Card className="bg-secondary/50 border-darkred/30">
             <CardContent className="p-6">
               <div className="flex flex-col space-y-4">
                 <h3 className="text-2xl font-bold">Contact Info</h3>
@@ -95,7 +95,7 @@ export function ContactSection() {
           </Card>
 
           {/* Contact Form Card */}
-          <Card className="bg-background/60 border-darkred/30">
+          <Card className="bg-secondary/50 border-darkred/30">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
@@ -135,7 +135,7 @@ export function ContactSection() {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full bg-darkred hover:bg-darkred/80" disabled={isSubmitting}>
+                <Button type="submit" className="w-full bg-darkred/80 hover:bg-darkred hover:scale-105 transition-transform duration-200" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
