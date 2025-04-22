@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 
 interface NotificationProps {
@@ -8,10 +8,13 @@ interface NotificationProps {
 }
 
 export const Notification: React.FC<NotificationProps> = ({ message, type = "info", onClose }) => {
+  const [visible, setVisible] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      onClose();
-    }, 3000); // Auto-close after 3 seconds
+      setVisible(false); // Start fade-out
+      setTimeout(onClose, 500); // Wait for fade-out to complete before closing
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [onClose]);
@@ -19,11 +22,12 @@ export const Notification: React.FC<NotificationProps> = ({ message, type = "inf
   return (
     <div
       className={clsx(
-        "fixed top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded shadow-lg text-white",
+        "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-6 py-4 rounded shadow-lg text-white text-center z-50 transition-opacity duration-500",
         {
-          "bg-green-500": type === "success",
-          "bg-red-500": type === "error",
-          "bg-blue-500": type === "info",
+          "opacity-100": true, // Always fully opaque
+          "bg-darkred/80": type === "success",
+          "bg-darkred/60": type === "error",
+          "bg-darkred/40": type === "info",
         }
       )}
     >

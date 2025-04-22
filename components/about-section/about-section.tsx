@@ -40,12 +40,12 @@ export function AboutSection() {
 
             <article className="space-y-3">
               <h3 className="text-xl font-semibold text-darkred">Experience</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                <strong>Software Development Intern</strong> — Akross <br />
+                <p className="text-muted-foreground leading-relaxed">
+                <strong>Software Development Intern</strong> — <a href="https://www.akross.com.br/" target="_blank" rel="noopener noreferrer" className="text-darkred underline">Akross</a> <br />
                 2024 – Present
-              </p>
+                </p>
               <p className="text-muted-foreground leading-relaxed">
-                <strong>Freelancer </strong> — Company Name<br />
+                <strong>Freelancer </strong><br />
                 2023 – 2024
               </p>
             </article>

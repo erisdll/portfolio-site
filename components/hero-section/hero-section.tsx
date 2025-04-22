@@ -30,7 +30,7 @@ export function HeroSection() {
               >
                 <Button
                   variant="outline"
-                  className="w-full sm:w-auto border-darkred hover:bg-darkred hover:text-white"
+                  className="w-full sm:w-auto border-darkred hover:bg-darkred hover:text-white hover:scale-105 transition-transform duration-200"
                 >
                   Download CV
                   <Download className="ml-2 h-4 w-4" aria-hidden="true" />
@@ -38,7 +38,7 @@ export function HeroSection() {
               </a>
 
               <Link href="#projects" passHref>
-                <Button className="w-full sm:w-auto bg-darkred/80 hover:bg-darkred text-white">
+                <Button className="w-full sm:w-auto bg-darkred/80 text-white hover:bg-darkred hover:scale-105 transition-transform duration-200">
                   View My Work
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Button>
