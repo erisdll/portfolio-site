@@ -47,7 +47,7 @@ export function ProjectCard({ title, description, tags, imageUrl, githubUrl, det
             Code
           </Button>
         </Link>
-        <Link href={detailsUrl} target="_blank" rel="noopener noreferrer">
+        <Link href={detailsUrl}>
           <Button size="sm">
             <ExternalLink className="mr-2 h-4 w-4" />
             Details

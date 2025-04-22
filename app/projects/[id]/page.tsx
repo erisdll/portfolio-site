@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import projects from "@/data/projects.json"
 
 interface ProjectPageProps {
   params: {
@@ -10,115 +11,9 @@ interface ProjectPageProps {
   }
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const projects = [
-    {
-      id: "1",
-      title: "Enterprise Resource Planning System",
-      description:
-        "A comprehensive ERP system built with Java Spring Boot and React, designed to streamline business operations.",
-      longDescription: `
-        This Enterprise Resource Planning (ERP) system was developed to help businesses manage their day-to-day activities more efficiently. The system integrates various business processes into a single, cohesive platform.
-        
-        Key features include:
-        - Human Resources Management
-        - Inventory and Supply Chain Management
-        - Financial Management and Accounting
-        - Customer Relationship Management
-        - Business Intelligence and Reporting
-        
-        The backend was built with Java Spring Boot, providing a robust and scalable foundation. The frontend was developed using React, offering a modern and intuitive user interface. PostgreSQL was used for data storage, and the entire system was deployed on AWS for reliability and scalability.
-      `,
-      imageUrl: "/placeholder.svg?height=600&width=1200",
-      technologies: ["Java", "Spring Boot", "React", "PostgreSQL", "AWS"],
-      challenges: [
-        "Integrating multiple business processes into a cohesive system",
-        "Ensuring data consistency across different modules",
-        "Optimizing performance for large datasets",
-        "Implementing robust security measures to protect sensitive business data",
-      ],
-      solutions: [
-        "Adopted a microservices architecture for better modularity",
-        "Implemented database transactions and consistency checks",
-        "Used caching and query optimization techniques",
-        "Implemented role-based access control and encryption",
-      ],
-      githubUrl: "https://github.com/erisdll",
-      liveUrl: "https://example.com",
-    },
-    {
-      id: "2",
-      title: "E-commerce Platform",
-      description:
-        "A scalable e-commerce platform with microservices architecture, supporting high-volume transactions and real-time inventory management.",
-      longDescription: `
-        This e-commerce platform was designed to handle high-volume transactions and provide a seamless shopping experience for users. The platform features a microservices architecture, allowing for independent scaling of different components.
-        
-        Key features include:
-        - Product catalog with advanced search and filtering
-        - Shopping cart and checkout process
-        - Payment processing integration
-        - Order management and tracking
-        - Real-time inventory management
-        - Customer reviews and ratings
-        
-        The backend was built with Java Spring Cloud for microservices orchestration, with Next.js powering the frontend for optimal performance and SEO. MongoDB was used for flexible data storage, and Docker was employed for containerization and easy deployment.
-      `,
-      imageUrl: "/placeholder.svg?height=600&width=1200",
-      technologies: ["Java", "Spring Cloud", "Next.js", "MongoDB", "Docker"],
-      challenges: [
-        "Ensuring system reliability during high-traffic periods",
-        "Maintaining data consistency across microservices",
-        "Optimizing the checkout process for conversion",
-        "Implementing secure payment processing",
-      ],
-      solutions: [
-        "Implemented auto-scaling and load balancing",
-        "Used event-driven architecture with message queues",
-        "Streamlined UI/UX with A/B testing",
-        "Integrated with secure payment gateways and implemented PCI compliance",
-      ],
-      githubUrl: "https://github.com/erisdll",
-      liveUrl: "https://example.com",
-    },
-    {
-      id: "3",
-      title: "Data Analytics Dashboard",
-      description:
-        "An interactive dashboard for visualizing and analyzing large datasets, with customizable reports and real-time updates.",
-      longDescription: `
-        This data analytics dashboard provides businesses with powerful tools to visualize and analyze their data. The dashboard offers real-time updates and customizable reports to help users make data-driven decisions.
-        
-        Key features include:
-        - Interactive data visualizations
-        - Customizable dashboards and reports
-        - Real-time data processing
-        - Data export and sharing capabilities
-        - Role-based access control
-        - Automated alerts and notifications
-        
-        The frontend was built with TypeScript and React for a responsive and type-safe user interface. NestJS powers the backend API, with various AWS services handling data storage and processing. D3.js was used for creating rich, interactive visualizations.
-      `,
-      imageUrl: "/placeholder.svg?height=600&width=1200",
-      technologies: ["TypeScript", "React", "NestJS", "AWS", "D3.js"],
-      challenges: [
-        "Processing and visualizing large datasets efficiently",
-        "Ensuring real-time updates without performance degradation",
-        "Creating intuitive and customizable user interfaces",
-        "Implementing complex data analysis algorithms",
-      ],
-      solutions: [
-        "Used data aggregation and streaming techniques",
-        "Implemented WebSockets for real-time communication",
-        "Developed a modular UI component system",
-        "Leveraged existing data analysis libraries and optimized algorithms",
-      ],
-      githubUrl: "https://github.com/erisdll",
-      liveUrl: "https://example.com",
-    },
-  ]
-
-  const project = projects.find((p) => p.id === params.id)
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id)
 
   if (!project) {
     return <div className="container py-12">Project not found</div>

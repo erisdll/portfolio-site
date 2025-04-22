@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "The Eclipse Hotel",
+    "description": "A dockerized Hotel Management application, Developed in Spring Boot with JPA/Hibernate and PostgreSQL.",
+    "longDescription": "The Eclipse Hotel is a hotel management application designed to streamline operations for hotel staff and management. It includes features such as room booking, customer management, and billing. The backend is built with Spring Boot and JPA/Hibernate, while PostgreSQL is used for data storage. The application is containerized with Docker for easy deployment.",
+    "imageUrl": "/placeholder.svg?height=400&width=600",
+    "technologies": ["Java 17", "Spring Boot", "PostgreSQL", "Docker", "Swagger"],
+    "challenges": [
+      "Implementing a robust booking system",
+      "Ensuring data consistency across multiple modules",
+      "Optimizing performance for concurrent users"
+    ],
+    "solutions": [
+      "Used JPA/Hibernate for seamless database interactions",
+      "Implemented transaction management for data consistency",
+      "Optimized queries and caching for better performance"
+    ],
+    "githubUrl": "https://github.com/erisdll/eclipse-hotel",
+    "liveUrl": "https://example.com/eclipse-hotel"
+  },
+  {
+    "id": "2",
+    "title": "Serverless URL Shortener",
+    "description": "A serverless URL shortener application built with AWS Lambda and DynamoDB, designed for high availability and low latency.",
+    "longDescription": "This serverless URL shortener application allows users to shorten URLs and track their usage. Built with AWS Lambda and DynamoDB, the application is designed for high availability and low latency. It includes features such as custom aliases, analytics, and expiration dates for shortened URLs.",
+    "imageUrl": "/placeholder.svg?height=400&width=600",
+    "technologies": ["Java 17", "AWS Lambda", "DynamoDB"],
+    "challenges": [
+      "Ensuring low latency for high traffic",
+      "Implementing analytics for URL usage",
+      "Managing expiration of shortened URLs"
+    ],
+    "solutions": [
+      "Used AWS Lambda for scalable serverless functions",
+      "Leveraged DynamoDB for fast and reliable data storage",
+      "Implemented scheduled tasks for URL expiration"
+    ],
+    "githubUrl": "https://github.com/erisdll/url-shortener-lambda",
+    "liveUrl": "https://example.com/url-shortener"
+  },
+  {
+    "id": "3",
+    "title": "Squad Management System",
+    "description": "A Collaborators and Squads Management system and API Developed as a challenge for a back-end internship.",
+    "longDescription": "The Squad Management System is an API designed to manage collaborators and squads within an organization. It includes features such as user authentication, role-based access control, and squad assignments. Built with NestJS and PostgreSQL, the system is containerized with Docker for easy deployment.",
+    "imageUrl": "/placeholder.svg?height=400&width=600",
+    "technologies": ["TypeScript", "NestJS", "PostgreSQL", "Docker", "Swagger"],
+    "challenges": [
+      "Implementing secure authentication and authorization",
+      "Designing a scalable database schema",
+      "Ensuring API performance under load"
+    ],
+    "solutions": [
+      "Used JWT for secure authentication",
+      "Designed a normalized database schema",
+      "Implemented caching and query optimization"
+    ],
+    "githubUrl": "https://github.com/erisdll/squad-collab-api",
+    "liveUrl": "https://example.com/squad-management"
+  },
+  {
+      "id": "4",
+      "title": "Personal Portfolio",
+      "description": "The website you're currently browsing. Built with React, Next.js, and Tailwind CSS. Deployed on Vercel.",
+      "longDescription": "This personal portfolio showcases my projects, skills, and experience. Built with React and Next.js, it features a responsive design powered by Tailwind CSS. The site is deployed on Vercel for fast and reliable hosting.",
+      "imageUrl": "/placeholder.svg?height=400&width=600",
+      "technologies": ["Typescript", "React", "Next.js", "Tailwind CSS"],
+      "challenges": [
+        "Creating a responsive and visually appealing design",
+        "Ensuring fast load times and performance",
+        "Organizing content effectively for user engagement"
+      ],
+      "solutions": [
+        "Used Tailwind CSS for rapid and consistent styling",
+        "Optimized images and assets for performance",
+        "Designed a clean and intuitive layout"
+      ],
+      "githubUrl": "https://github.com/erisdll/portfolio-site/",
+      "liveUrl": "https://example.com/personal-portfolio"
+    },
+    {
+      "id": "5",
+      "title": "CLI Matrix Commander",
+      "description": "A command-line interface application focused on the mathematical manipulation of matrices, developed in pure Java using OOP best practices.",
+      "longDescription": "The CLI Matrix Commander is a command-line application for performing mathematical operations on matrices. It supports operations such as addition, subtraction, multiplication, and inversion. Developed in pure Java, it follows OOP best practices for maintainability and scalability.",
+      "imageUrl": "/placeholder.svg?height=400&width=600",
+      "technologies": ["Java", "OOP", "CLI"],
+      "challenges": [
+        "Implementing complex matrix operations",
+        "Ensuring accurate and efficient calculations",
+        "Designing an intuitive CLI interface"
+      ],
+      "solutions": [
+        "Used modular OOP design for maintainability",
+        "Optimized algorithms for matrix operations",
+        "Designed a user-friendly CLI with clear instructions"
+      ],
+      "githubUrl": "https://github.com/erisdll/matrix-manager-cli",
+      "liveUrl": "https://example.com/cli-matrix-commander"
+    }
+]

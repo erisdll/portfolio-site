@@ -33,10 +33,11 @@ export default function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <Button variant="ghost" size="icon" className="md:hidden border border-darkred" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </Button>
+        
 
         <div className="hidden md:flex items-center gap-2">
           <Link href="https://github.com/erisdll" target="_blank" rel="noopener noreferrer">
@@ -45,12 +46,14 @@ export default function Header() {
               <span className="sr-only">GitHub</span>
             </Button>
           </Link>
+
           <Link href="https://linkedin.com/in/erika-mello" target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon" className="hover:text-darkred">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Button>
           </Link>
+
           <Link href="/#contact">
             <Button className="bg-darkred hover:bg-darkred/80">Contact Me</Button>
           </Link>
@@ -89,20 +92,6 @@ export default function Header() {
             >
               Projects
             </Link>
-            <div className="flex items-center gap-2 pt-2">
-              <Link href="https://github.com/erisdll" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon" className="hover:text-darkred">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link href="https://linkedin.com/in/erika-mello" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon" className="hover:text-darkred">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
-            </div>
           </nav>
         </div>
       )}

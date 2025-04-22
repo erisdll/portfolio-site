@@ -6,7 +6,6 @@ export function AboutSection() {
       aria-label="About Erika Mello"
     >
       <div className="px-4 md:px-6 mx-auto w-full max-w-[1400px] space-y-20">
-        {/* Título e descrição */}
         <header className="text-center space-y-4 mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
             <span className="text-darkred">{">"}</span>whoami
@@ -16,9 +15,7 @@ export function AboutSection() {
           </p>
         </header>
 
-        {/* Conteúdo em duas colunas mais amplas */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20">
-          {/* Coluna 1 */}
           <div className="flex flex-col space-y-8">
             <article className="space-y-3 text-justify">
               <h3 className="text-xl font-semibold text-darkred">My Journey</h3>
@@ -39,21 +36,7 @@ export function AboutSection() {
             </article>
           </div>
 
-          {/* Coluna 2 */}
           <div className="flex flex-col space-y-8">
-            <article className="space-y-3">
-              <h3 className="text-xl font-semibold text-darkred">Education</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                <strong>Bachelor's Degree in Computer Science</strong>
-                <br />
-                Estácio de Sá, 2023-2027 {"(ongoing)"}
-              </p>
-                <p className="text-muted-foreground leading-relaxed">
-                <strong>Backend Development Bootcamp</strong>
-                <br />
-                Reprograma, 2023-2027
-                </p>
-            </article>
 
             <article className="space-y-3">
               <h3 className="text-xl font-semibold text-darkred">Experience</h3>
@@ -64,6 +47,20 @@ export function AboutSection() {
               <p className="text-muted-foreground leading-relaxed">
                 <strong>Freelancer </strong> — Company Name<br />
                 2023 – 2024
+              </p>
+            </article>
+
+            <article className="space-y-3">
+              <h3 className="text-xl font-semibold text-darkred">Education</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Bachelor's Degree in Computer Science</strong>
+                <br />
+                Estácio de Sá, 2023-2027 {"(ongoing)"}
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Backend Development Bootcamp</strong>
+                <br />
+                Reprograma, 2023
               </p>
             </article>
 
