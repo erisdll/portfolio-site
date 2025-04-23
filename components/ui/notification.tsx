@@ -12,8 +12,8 @@ export const Notification: React.FC<NotificationProps> = ({ message, type = "inf
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setVisible(false); // Start fade-out
-      setTimeout(onClose, 500); // Wait for fade-out to complete before closing
+      setVisible(false);
+      setTimeout(onClose, 500);
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -24,7 +24,7 @@ export const Notification: React.FC<NotificationProps> = ({ message, type = "inf
       className={clsx(
         "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-6 py-4 rounded shadow-lg text-white text-center z-50 transition-opacity duration-500",
         {
-          "opacity-100": true, // Always fully opaque
+          "opacity-100": true,
           "bg-darkred/80": type === "success",
           "bg-darkred/60": type === "error",
           "bg-darkred/40": type === "info",
