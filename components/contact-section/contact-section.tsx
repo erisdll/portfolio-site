@@ -10,7 +10,7 @@ import { Notification } from "@/components/ui/notification";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
-export function ContactSection() {
+export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [notification, setNotification] = useState<{ message: string; type: "success" | "error" | "info" } | null>(null);
 

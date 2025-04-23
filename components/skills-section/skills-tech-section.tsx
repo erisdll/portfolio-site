@@ -1,4 +1,4 @@
-export function TechStackSection() {
+export default function TechStackSection() {
   const skillCategories = [
     {
       name: "Backend",

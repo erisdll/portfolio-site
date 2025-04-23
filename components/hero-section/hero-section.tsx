@@ -3,7 +3,7 @@ import { ArrowRight, Download } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-export function HeroSection() {
+export default function HeroSection() {
   return (
     <section
       className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background"
