@@ -13,7 +13,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Erika Mello | Portfolio",
   description: "Personal portfolio of Erika Mello, Software Developer",
-  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -36,3 +35,4 @@ export default function RootLayout({
     </html>
   )
 }
+g
