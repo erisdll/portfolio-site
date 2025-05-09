@@ -24,7 +24,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <a
-                href="/ErikaMello_CV.pdf"
+                href="/Resume.pdf"
                 download="ErikaMello_CV.pdf"
                 className="w-full sm:w-auto"
               >
