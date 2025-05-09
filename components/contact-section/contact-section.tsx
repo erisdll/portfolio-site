@@ -81,10 +81,6 @@ export default function ContactSection() {
                       github.com/erisdll
                     </Link>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-darkred" />
-                    <span>+55 11 995 179 321</span>
-                  </div>
                 </div>
                 <div className="pt-4">
                   <h4 className="text-lg font-semibold">Current Location</h4>
