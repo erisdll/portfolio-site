@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Notification } from "@/components/ui/notification";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function ContactSection() {
@@ -80,10 +80,6 @@ export default function ContactSection() {
                     >
                       github.com/erisdll
                     </Link>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-darkred" />
-                    <span>+55 11 995 179 321</span>
                   </div>
                 </div>
                 <div className="pt-4">
